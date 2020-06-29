@@ -39,7 +39,7 @@ a {
 }
 header {
   @extend %align-content;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   .header--wrapper {
     height: 50px;
     display: flex;
@@ -81,6 +81,23 @@ section {
     max-width: 200px;
     width: 100%;
     height: auto;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  a {
+    font-size: $font-size + 2px;
+    margin: 0 5px;
+  }
+  .active {
+    border-bottom: 2px solid $border-bottom;
+  }
+  :hover{
+    opacity:0.5;
+    border-bottom: 2px solid $border-bottom;
   }
 }
 

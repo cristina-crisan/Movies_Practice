@@ -93,9 +93,30 @@ section {
   height: auto;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.pagination a {
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.pagination .active {
+  border-bottom: 2px solid #ddd4bb;
+}
+
+.pagination :hover {
+  opacity: 0.5;
+  border-bottom: 2px solid #ddd4bb;
+}
+
 footer .footer-container {
   text-align: center;
   height: 60px;
   line-height: 60px;
 }
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=index.css.map */

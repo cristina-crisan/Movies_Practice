@@ -1,0 +1,54 @@
+@import "../../helpers";
+@import "../../styles";
+
+body {
+  justify-content: space-between;
+}
+
+header {
+  margin-bottom: 0;
+}
+section {
+  @extend %align-content;
+}
+
+.movie-title {
+  text-align: center;
+  h2{
+    margin:10px;
+  }
+}
+.movie {
+  border: 1px solid $line-color;
+  display: flex;
+  max-height: 350px;
+  .movie-image {
+    img {
+      width: 300px;
+      height: 100%;
+    }
+  }
+  .movie-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    span {
+      font-size: $font-size + 2px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .movie-description {
+      p {
+        text-align: justify;
+        line-height: 1.5;
+      }
+    }
+    .movie-actions {
+      text-align: right;
+      button {
+        @extend %action-button;
+        padding: 10px;
+      }
+    }
+  }
+}

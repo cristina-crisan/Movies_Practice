@@ -1,14 +1,22 @@
 $primary-color: #7e796a;
-$secondary-color:#686458;
+$secondary-color: #686458;
 $bg-color: #131210;
 $border-color: #b7b09b;
-$line-color:#262420;
-$border-movie:#22201c;
+$line-color: #262420;
+$border-movie: #22201c;
 $border-bottom: #ddd4bb;
 $font-size: 14px;
 
 %align-content {
   max-width: 1050px;
-  width:100%;
+  width: 100%;
   margin: 0 auto;
+}
+
+%action-button {
+  border: none;
+  background-color: transparent;
+  font-size: $font-size + 2px;
+  text-transform: uppercase;
+  color: inherit;
 }

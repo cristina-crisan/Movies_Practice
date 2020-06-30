@@ -1,10 +1,4 @@
-header, footer, section {
-  max-width: 1050px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-header, footer, section {
+header, footer {
   max-width: 1050px;
   width: 100%;
   margin: 0 auto;
@@ -82,47 +76,4 @@ footer .footer-container {
   height: 60px;
   line-height: 60px;
 }
-
-section {
-  flex-grow: 1;
-}
-
-.section--wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.movie {
-  max-width: 200px;
-  width: 100%;
-  border: 1px solid #22201c;
-  margin: 5px;
-}
-
-.movie img {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px auto;
-}
-
-.pagination a {
-  font-size: 16px;
-  margin: 0 5px;
-}
-
-.pagination .active {
-  border-bottom: 2px solid #ddd4bb;
-}
-
-.pagination :hover {
-  opacity: 0.5;
-  border-bottom: 2px solid #ddd4bb;
-}
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=styles.css.map */

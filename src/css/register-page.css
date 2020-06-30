@@ -1,10 +1,10 @@
-header, footer, section {
+header, footer {
   max-width: 1050px;
   width: 100%;
   margin: 0 auto;
 }
 
-header, footer, section {
+header, footer {
   max-width: 1050px;
   width: 100%;
   margin: 0 auto;
@@ -83,46 +83,60 @@ footer .footer-container {
   line-height: 60px;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 section {
+  max-width: 450px;
+  width: 100%;
+  height: 350px;
+  padding: 40px;
+  border: 1px solid #7e796a;
+  box-shadow: 0px 0px 10px 0px #7e796a;
+}
+
+section .section-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section .section-wrapper .header {
+  text-align: center;
+}
+
+section .section-wrapper .header i {
+  font-size: 114px;
+}
+
+section .section-wrapper form {
   flex-grow: 1;
 }
 
-.section--wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.movie {
-  max-width: 200px;
+section .section-wrapper form .form-details input {
+  height: 30px;
+  display: block;
   width: 100%;
-  border: 1px solid #22201c;
-  margin: 5px;
+  margin: 10px 0;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #686458;
+  background-color: transparent;
 }
 
-.movie img {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px auto;
-}
-
-.pagination a {
+section .section-wrapper form .submit {
+  border: none;
+  background-color: transparent;
+  color: #7e796a;
   font-size: 16px;
-  margin: 0 5px;
+  margin: 10px 0;
+  cursor: pointer;
 }
 
-.pagination .active {
-  border-bottom: 2px solid #ddd4bb;
+section {
+  padding: 20px 40px !important;
 }
-
-.pagination :hover {
-  opacity: 0.5;
-  border-bottom: 2px solid #ddd4bb;
-}
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=register-page.css.map */

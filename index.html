@@ -12,74 +12,26 @@
 <body>
   <header>
     <div class="header--wrapper">
-      <div class="logo">Movies</div>
+      <div onclick="homePage()" class="logo">Movies</div>
       <div class="header--search">
-        <input type="text" name="search" placeholder="Search">
+        <input class="title" type="text" name="search" onkeyup="search()" placeholder="Search">
       </div>
       <nav>
         <span>/</span>
-        <a href="">Login</a>
+        <a href="src\components\login\login-page.html">Login</a>
       </nav>
     </div>
     <div class="decoration--line"></div>
   </header>
 
-  <section>
-    <div class="section--wrapper">
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-      <div class="movie">
-        <image src="src/images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-      </div>
-
-    </div>
+  <section class="width">
+    <div class="section--wrapper"></div>
   </section>
 
-  <section class="pagination">
-      <a href="#" class="active">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">5</a>
-      <a href="#">6</a>
-      <a href="#">7</a>
-      <a href="#">8</a>
-      <a href="#">9</a>
-  </section>
+  <section class="pagination"></section>
+  <div class="regenerate">
+    <button onclick="regenerate()"><i class="fas fa-sync-alt"></i></button>
+  </div>
   <footer>
     <div class="decoration--line"></div>
     <div class="footer-container">
@@ -87,7 +39,8 @@
     </div>
 
   </footer>
-
+  <script src="src/http-service.js"></script>
+  <script src="src/index.js"></script>
 </body>
 
 </html>

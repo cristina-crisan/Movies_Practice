@@ -14,12 +14,11 @@ body {
   font-size: $font-size;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  overflow: 0;
 }
 
-a {
-  text-decoration: none;
-  color: $primary-color;
-}
+
 * {
   box-sizing: border-box;
 }
@@ -38,7 +37,7 @@ a {
 }
 header {
   @extend %align-content;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   .header--wrapper {
     height: 50px;
     display: flex;
@@ -53,11 +52,12 @@ header {
       width: 30%;
       background-color: $bg-color;
       border: 2px solid $line-color;
+      color:white;
     }
   }
   nav {
     span {
-      font-size: $font-size + 2px;
+      font-size: $font-size + 4px;
     }
   }
 }

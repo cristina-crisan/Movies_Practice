@@ -4,10 +4,48 @@ header, footer, section {
   margin: 0 auto;
 }
 
+.pagination button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.regenerate button {
+  display: block;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.regenerate button i {
+  color: #7e796a;
+}
+
 header, footer, section {
   max-width: 1050px;
   width: 100%;
   margin: 0 auto;
+}
+
+.pagination button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.regenerate button {
+  display: block;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.regenerate button i {
+  color: #7e796a;
 }
 
 html {
@@ -25,11 +63,8 @@ body {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  color: #7e796a;
+  justify-content: space-between;
+  overflow: 0;
 }
 
 * {
@@ -50,10 +85,6 @@ a {
   color: white;
 }
 
-header {
-  margin-bottom: 20px;
-}
-
 header .header--wrapper {
   height: 50px;
   display: flex;
@@ -71,10 +102,11 @@ header .header--search input {
   width: 30%;
   background-color: #131210;
   border: 2px solid #262420;
+  color: white;
 }
 
 header nav span {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 footer .footer-container {
@@ -83,8 +115,9 @@ footer .footer-container {
   line-height: 60px;
 }
 
-section {
-  flex-grow: 1;
+a {
+  text-decoration: none;
+  color: #7e796a;
 }
 
 .section--wrapper {
@@ -93,16 +126,34 @@ section {
 }
 
 .movie {
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
   max-width: 200px;
   width: 100%;
   border: 1px solid #22201c;
   margin: 5px;
+  position: relative;
 }
 
-.movie img {
-  max-width: 200px;
+.movie .movie-title {
+  display: none;
+}
+
+.movie:hover {
+  background-image: url("../images/Batman-hover.jpg") !important;
+}
+
+.movie:hover .movie-title {
+  position: absolute;
   width: 100%;
-  height: auto;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  text-align: center;
 }
 
 .pagination {
@@ -112,11 +163,6 @@ section {
   margin: 20px auto;
 }
 
-.pagination a {
-  font-size: 16px;
-  margin: 0 5px;
-}
-
 .pagination .active {
   border-bottom: 2px solid #ddd4bb;
 }
@@ -124,5 +170,12 @@ section {
 .pagination :hover {
   opacity: 0.5;
   border-bottom: 2px solid #ddd4bb;
+}
+
+.regenerate {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 /*# sourceMappingURL=index.css.map */

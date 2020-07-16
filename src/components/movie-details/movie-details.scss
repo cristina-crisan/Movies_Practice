@@ -5,6 +5,13 @@ body {
   justify-content: space-between;
 }
 
+.wrapper {
+  @extend %wrapper;
+  .back {
+    @extend %back-button;
+}
+}
+
 header {
   margin-bottom: 0;
 }

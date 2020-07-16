@@ -4,12 +4,28 @@ header, footer, section {
   margin: 0 auto;
 }
 
-.movie .movie-content .movie-actions button {
+input, textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #686458;
+  background-color: transparent;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+input {
+  height: 30px;
+  display: block;
+}
+
+.save--button button {
   border: none;
   background-color: transparent;
+  color: #7e796a;
   font-size: 16px;
-  text-transform: uppercase;
-  color: inherit;
+  margin: 5px 0;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -33,12 +49,28 @@ header, footer, section {
   margin: 0 auto;
 }
 
-.movie .movie-content .movie-actions button {
+input, textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #686458;
+  background-color: transparent;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+input {
+  height: 30px;
+  display: block;
+}
+
+.save--button button {
   border: none;
   background-color: transparent;
+  color: #7e796a;
   font-size: 16px;
-  text-transform: uppercase;
-  color: inherit;
+  margin: 5px 0;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -123,55 +155,45 @@ footer .footer-container {
   line-height: 60px;
 }
 
-body {
-  justify-content: space-between;
+textarea {
+  height: 100px;
 }
 
-header {
-  margin-bottom: 0;
+section {
+  border: 1px solid #7e796a;
+  box-shadow: 0px 0px 10px 0px #7e796a;
+  margin: 20px auto;
 }
 
-.movie-title {
-  text-align: center;
-}
-
-.movie-title h2 {
-  margin: 10px;
-}
-
-.movie {
-  border: 1px solid #262420;
+section .section-wrapper {
   display: flex;
-  max-height: 350px;
 }
 
-.movie .movie-image img {
-  width: 300px;
+section .section-wrapper .image-game img {
+  max-width: 350px;
+  width: 100%;
   height: 100%;
 }
 
-.movie .movie-content {
+section .section-wrapper form {
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+  flex-grow: 1;
 }
 
-.movie .movie-content span {
-  font-size: 16px;
-  display: inline-block;
-  margin-bottom: 5px;
+.image--game {
+  display: flex;
+  justify-content: center;
 }
 
-.movie .movie-content .movie-description p {
-  text-align: justify;
-  line-height: 1.5;
+.image--game img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
-.movie .movie-content .movie-actions {
-  text-align: right;
+.save--button {
+  text-align: center;
 }
-
-.movie .movie-content .movie-actions button {
-  padding: 10px;
-}
-/*# sourceMappingURL=movie-details.css.map */
+/*# sourceMappingURL=add-or-update-page.css.map */

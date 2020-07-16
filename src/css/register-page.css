@@ -4,10 +4,58 @@ header, footer {
   margin: 0 auto;
 }
 
+section .section-wrapper form .form-details input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #686458;
+  background-color: transparent;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+section .section-wrapper form .form-details input {
+  height: 30px;
+  display: block;
+}
+
+section .section-wrapper form .submit {
+  border: none;
+  background-color: transparent;
+  color: #7e796a;
+  font-size: 16px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
 header, footer {
   max-width: 1050px;
   width: 100%;
   margin: 0 auto;
+}
+
+section .section-wrapper form .form-details input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #686458;
+  background-color: transparent;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+section .section-wrapper form .form-details input {
+  height: 30px;
+  display: block;
+}
+
+section .section-wrapper form .submit {
+  border: none;
+  background-color: transparent;
+  color: #7e796a;
+  font-size: 16px;
+  margin: 5px 0;
+  cursor: pointer;
 }
 
 html {
@@ -25,11 +73,8 @@ body {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  color: #7e796a;
+  justify-content: space-between;
+  overflow: 0;
 }
 
 * {
@@ -50,10 +95,6 @@ a {
   color: white;
 }
 
-header {
-  margin-bottom: 20px;
-}
-
 header .header--wrapper {
   height: 50px;
   display: flex;
@@ -71,10 +112,11 @@ header .header--search input {
   width: 30%;
   background-color: #131210;
   border: 2px solid #262420;
+  color: white;
 }
 
 header nav span {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 footer .footer-container {
@@ -116,27 +158,11 @@ section .section-wrapper form {
   flex-grow: 1;
 }
 
-section .section-wrapper form .form-details input {
-  height: 30px;
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  border: 0;
-  outline: 0;
-  border-bottom: 1px solid #686458;
-  background-color: transparent;
-}
-
-section .section-wrapper form .submit {
-  border: none;
-  background-color: transparent;
-  color: #7e796a;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
-}
-
 section {
   padding: 20px 40px !important;
+}
+
+input {
+  color: white;
 }
 /*# sourceMappingURL=register-page.css.map */

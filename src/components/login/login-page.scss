@@ -1,12 +1,16 @@
 @import "../../helpers";
 @import "../../styles";
 
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+// a {
+//   color: blue;
+//   text-decoration: underline;
+// }
 
 section {
   max-width: 450px;
@@ -29,23 +33,12 @@ section {
       flex-grow: 1;
       .form-details {
         input {
-          height: 30px;
-          display: block;
-          width: 100%;
-          margin: 10px 0;
-          border: 0;
-          outline: 0;
-          border-bottom: 1px solid $secondary-color;
-          background-color: transparent;
+          @extend %input-textarea;
+          @extend %input-design;
         }
       }
       .submit {
-        border: none;
-        background-color: transparent;
-        color: $primary-color;
-        font-size: $font-size + 2px;
-        margin: 10px 0;
-        cursor: pointer;
+        @extend %form-button;
       }
     }
   }

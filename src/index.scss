@@ -1,9 +1,14 @@
 @import "helpers";
 @import "styles";
 
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
 section {
   @extend %align-content;
-  flex-grow: 1;
+  // flex-grow: 1;
 }
 .section--wrapper {
   display: flex;
@@ -11,32 +16,58 @@ section {
 }
 
 .movie {
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
   max-width: 200px;
   width: 100%;
   border: 1px solid $border-movie;
   margin: 5px;
-  img {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
+  position: relative;
+  .movie-title {
+    display: none;
+  }
+
+  &:hover {
+    background-image: url("../images/Batman-hover.jpg") !important;
+    .movie-title {
+      position: absolute;
+      width: 100%;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      text-align: center;
+    }
   }
 }
+
 .pagination {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 20px auto;
-  a {
-    font-size: $font-size + 2px;
-    margin: 0 5px;
+  button {
+    @extend %action-button;
   }
   .active {
     border-bottom: 2px solid $border-bottom;
   }
-  :hover{
-    opacity:0.5;
+  :hover {
+    opacity: 0.5;
     border-bottom: 2px solid $border-bottom;
   }
 }
 
+.regenerate {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 
+  button {
+    @extend %back-button;
+  }
+}

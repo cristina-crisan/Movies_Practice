@@ -1,9 +1,13 @@
 @import "helpers";
 @import "styles";
 
-a {
-  text-decoration: none;
-  color: $primary-color;
+.login{
+  button{
+    @extend %action-button; 
+  }
+  .logout{
+    display:none;
+  }
 }
 
 section {

@@ -4,7 +4,7 @@ header, footer, section {
   margin: 0 auto;
 }
 
-.pagination button {
+.login button, .pagination button {
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -29,7 +29,7 @@ header, footer, section {
   margin: 0 auto;
 }
 
-.pagination button {
+.login button, .pagination button {
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -115,9 +115,8 @@ footer .footer-container {
   line-height: 60px;
 }
 
-a {
-  text-decoration: none;
-  color: #7e796a;
+.login .logout {
+  display: none;
 }
 
 .section--wrapper {

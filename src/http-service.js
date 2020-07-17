@@ -1,7 +1,7 @@
 const baseUrl = "https://movies-api-siit.herokuapp.com/movies?skip=0&take=10";
 const url = "https://movies-api-siit.herokuapp.com"
 class HttpService {
-  constructor () {};
+  constructor() { };
 
   static regenerateMovies() {
     return fetch(`${url}/movies/all`, {
@@ -41,7 +41,20 @@ class HttpService {
       }
     }).then(response => response.json())
   }
+  static loginUser(username, password) {
+    let data = {
+      username: username,
+      password: password
+    };
 
+    return fetch(url + "/auth/login", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(response => response.json())
+  }
 };
 
 

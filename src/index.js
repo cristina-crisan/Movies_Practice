@@ -100,3 +100,7 @@ function search() {
 function homePage() {
   location.reload();
 }
+
+function loginPage(){
+  location.assign("src/components/login/login-page.html")
+}

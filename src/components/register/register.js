@@ -1,5 +1,4 @@
 
-
 function register() {
   let username = document.querySelector(".user").value;
   let userElement = document.querySelector(".user");

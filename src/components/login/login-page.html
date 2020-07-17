@@ -17,10 +17,10 @@
       </div>
       <form>
         <div class="form-details">
-          <input type="text" name="username" placeholder="Username" />
-          <input type="password" name="password" placeholder="**********" />
+          <input type="text" class="user" name="username" placeholder="Username" />
+          <input type="password" class="password" name="password" placeholder="**********" />
         </div>
-        <button class="submit" >Submit</button>
+        <button type="button" class="login" onclick="login()">Login</button>
       </form>
       <div>
         <span>No account?</span>
@@ -29,5 +29,6 @@
     </div>
   </section>
 </body>
-
+<script src="../../http-service.js"></script>
+<script src="login.js"></script>
 </html>

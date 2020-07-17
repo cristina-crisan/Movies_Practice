@@ -1,15 +1,6 @@
 @import "helpers";
 @import "styles";
 
-.login{
-  button{
-    @extend %action-button; 
-  }
-  .logout{
-    display:none;
-  }
-}
-
 section {
   @extend %align-content;
   // flex-grow: 1;
@@ -66,11 +57,7 @@ section {
 }
 
 .regenerate {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-
+  @extend %button-positioning;
   button {
     @extend %back-button;
   }

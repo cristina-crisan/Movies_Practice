@@ -12,10 +12,12 @@ input {
   @extend %input-textarea;
   @extend %input-design;
 }
+
 textarea {
   @extend %input-textarea;
   height: 100px;
 }
+
 section {
   @extend %align-content;
   border: 1px solid $primary-color;
@@ -48,6 +50,7 @@ section {
     height: auto;
   }
 }
+
 .save--button {
   text-align: center;
   button {

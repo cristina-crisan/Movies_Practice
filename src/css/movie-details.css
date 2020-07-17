@@ -4,7 +4,7 @@ header, footer, section {
   margin: 0 auto;
 }
 
-.movie .movie-content .movie-actions button {
+header nav .login button, section .movie .movie-content .movie-actions button {
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -25,6 +25,13 @@ header, footer, section {
 
 .wrapper .back i {
   color: #7e796a;
+}
+
+.wrapper .back {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 header, footer, section {
@@ -33,7 +40,7 @@ header, footer, section {
   margin: 0 auto;
 }
 
-.movie .movie-content .movie-actions button {
+header nav .login button, section .movie .movie-content .movie-actions button {
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -54,6 +61,13 @@ header, footer, section {
 
 .wrapper .back i {
   color: #7e796a;
+}
+
+.wrapper .back {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 html {
@@ -113,8 +127,8 @@ header .header--search input {
   color: white;
 }
 
-header nav span {
-  font-size: 18px;
+header nav .login .logout {
+  display: none;
 }
 
 footer .footer-container {
@@ -123,55 +137,53 @@ footer .footer-container {
   line-height: 60px;
 }
 
-body {
-  justify-content: space-between;
-}
-
 header {
   margin-bottom: 0;
 }
 
-.movie-title {
+section .movie-title {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.movie-title h2 {
+section .movie-title h2 {
   margin: 10px;
 }
 
-.movie {
+section .movie {
   border: 1px solid #262420;
   display: flex;
   max-height: 350px;
 }
 
-.movie .movie-image img {
+section .movie .movie-image img {
   width: 300px;
   height: 100%;
 }
 
-.movie .movie-content {
+section .movie .movie-content {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
 }
 
-.movie .movie-content span {
+section .movie .movie-content span {
   font-size: 16px;
   display: inline-block;
   margin-bottom: 5px;
 }
 
-.movie .movie-content .movie-description p {
+section .movie .movie-content .movie-description p {
   text-align: justify;
   line-height: 1.5;
 }
 
-.movie .movie-content .movie-actions {
+section .movie .movie-content .movie-actions {
   text-align: right;
 }
 
-.movie .movie-content .movie-actions button {
+section .movie .movie-content .movie-actions button {
   padding: 10px;
+  display: none;
 }
 /*# sourceMappingURL=movie-details.css.map */

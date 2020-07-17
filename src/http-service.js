@@ -27,12 +27,15 @@ class HttpService {
       });
   }
 
+  static getMovieDetails(gameId) {
+    return fetch(`${url}/movies/${gameId}`).then(response => response.json());
+  }
+
   static register(username, password) {
     let data = {
       username: username,
       password: password
     };
-
     return fetch(url + "/auth/register", {
       method: "POST",
       body: JSON.stringify(data),
@@ -41,6 +44,7 @@ class HttpService {
       }
     }).then(response => response.json())
   }
+  
   static loginUser(username, password) {
     let data = {
       username: username,
@@ -55,6 +59,8 @@ class HttpService {
       }
     }).then(response => response.json())
   }
+
+
 };
 
 

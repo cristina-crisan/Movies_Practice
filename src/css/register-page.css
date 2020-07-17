@@ -4,6 +4,14 @@ header, footer {
   margin: 0 auto;
 }
 
+header nav .login button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
 section .section-wrapper form .form-details input {
   width: 100%;
   border: 0;
@@ -19,7 +27,7 @@ section .section-wrapper form .form-details input {
   display: block;
 }
 
-section .section-wrapper form .login {
+section .section-wrapper form .user-action {
   border: none;
   background-color: transparent;
   color: #7e796a;
@@ -34,6 +42,14 @@ header, footer {
   margin: 0 auto;
 }
 
+header nav .login button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
 section .section-wrapper form .form-details input {
   width: 100%;
   border: 0;
@@ -49,7 +65,7 @@ section .section-wrapper form .form-details input {
   display: block;
 }
 
-section .section-wrapper form .login {
+section .section-wrapper form .user-action {
   border: none;
   background-color: transparent;
   color: #7e796a;
@@ -115,8 +131,8 @@ header .header--search input {
   color: white;
 }
 
-header nav span {
-  font-size: 18px;
+header nav .login .logout {
+  display: none;
 }
 
 footer .footer-container {

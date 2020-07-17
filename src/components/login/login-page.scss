@@ -7,11 +7,6 @@ body {
   align-items: center;
 }
 
-// a {
-//   color: blue;
-//   text-decoration: underline;
-// }
-
 section {
   max-width: 450px;
   width: 100%;
@@ -37,7 +32,7 @@ section {
           @extend %input-design;
         }
       }
-      .login {
+      .user-action {
         @extend %form-button;
       }
     }

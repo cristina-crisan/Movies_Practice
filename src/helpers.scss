@@ -20,6 +20,7 @@ $font-size: 14px;
   text-transform: uppercase;
   color: inherit;
 }
+
 %input-textarea {
   width: 100%;
   border: 0;
@@ -56,4 +57,11 @@ $font-size: 14px;
   i {
     color: $primary-color;
   }
+}
+
+%button-positioning{
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }

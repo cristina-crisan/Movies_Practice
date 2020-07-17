@@ -4,9 +4,7 @@ window.onload = () => {
     console.log(response);
     createPagination(response.pagination);
     loadMovies(response.results);
-
   });
-
 }
 
 function regenerate() {
@@ -17,7 +15,7 @@ function regenerate() {
 
 function createMovieTemplate(movie) {
   return `
-  <div class="movie" onclick = "movieDetails()" style="background-image: url(${movie.Poster})" id =${movie._id}>
+  <div class="movie"style="background-image: url(${movie.Poster})" id =${movie._id}  onclick = "openMovieDetails('${movie._id}')" >
   <p class="movie-title">${movie.Title}</p>
 </div> `
 }
@@ -96,11 +94,14 @@ function search() {
   })
 }
 
-
 function homePage() {
   location.reload();
 }
 
 function loginPage(){
   location.assign("src/components/login/login-page.html")
+}
+
+function openMovieDetails(movieId){
+  window.location.href ="src/components/movie-details/movie-details.html?id=" + movieId;
 }

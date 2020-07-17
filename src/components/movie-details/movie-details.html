@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Details page</title>
-</head>
-
-<body>
-  <!DOCTYPE html>
-  <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,68 +9,33 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <button class="back" onclick="back()"><i class="fas fa-arrow-left"></i></i></button>
-    </div>
     <header>
       <div class="header--wrapper">
-        <div class="logo">Movies</div>
+        <div onclick="homePage()" class="logo">Movies</div>
+        <div class="header--search">
+          <input class="title" type="text" name="search" onkeyup="search()" placeholder="Search">
+        </div>
         <nav>
-          <span>/</span>
-          <a href="">Login</a>
+          <div class="login">
+            <button onclick="loginPage()" class="login" type="button">/ Login</button>
+            <button class="logout" type="button">/ Logout</button>
+          </div>
         </nav>
       </div>
       <div class="decoration--line"></div>
     </header>
-
-    <section>
-      <div class="movie-title">
-        <div class="decoration--line"></div>
-        <h2>Movie Title</h2>
-        <div class="decoration--line"></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="movie">
-        <div class="movie-image">
-          <img src="../../images/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" alt="Movie image">
-        </div>
-        <div class="movie-content">
-          <div class="movie-description">
-            <span>/</span>
-            <span>Description</span>
-            <div class="decoration--line"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id mattis ex. Aliquam augue sapien,
-              pharetra in hendrerit sed, interdum sed nunc. Phasellus et dolor eu felis pretium molestie vel eu enim.
-              Fusce vulputate mattis felis a ultricies. Integer efficitur pharetra viverra. In sit amet justo vitae orci
-              bibendum congue.</p>
-          </div>
-          <div class="movie-details">
-            <span>/</span>
-            <span>Details</span>
-            <div class="decoration--line"></div>
-            <p> Year :</p>
-            <p> Language :</p>
-            <p> Runtime :</p>
-            <p> Genre :</p>
-            <p> Imdb Rating :</p>
-          </div>
-          <div class="movie-actions">
-            <button type="button" class="edit-button">Edit</button>
-            <button type="button" class="delete-button">Delete</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <section class="movie-template"></section>
+    <div class="wrapper">
+      <button class="back" onclick="back()"><i class="fas fa-arrow-left"></i></i></button>
+    </div>
     <footer>
       <div class="decoration--line"></div>
       <div class="footer-container">
         <p>Cristina CRISAN</p>
       </div>
-
     </footer>
+    <script src="../../http-service.js"></script>
+    <script src="movie-details.js"></script>
   </body>
 
   </html>

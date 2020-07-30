@@ -27,8 +27,8 @@ class HttpService {
       });
   }
 
-  static getMovieDetails(gameId) {
-    return fetch(`${url}/movies/${gameId}`).then(response => response.json());
+  static getMovieDetails(movieId) {
+    return fetch(`${url}/movies/${movieId}`).then(response => response.json());
   }
 
   static register(username, password) {
@@ -44,7 +44,7 @@ class HttpService {
       }
     }).then(response => response.json())
   }
-  
+
   static loginUser(username, password) {
     let data = {
       username: username,
@@ -60,7 +60,17 @@ class HttpService {
     }).then(response => response.json())
   }
 
-
-};
+  static delete(movieId) {
+    return fetch(`${url}/movies/${movieId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "x-Auth-Token": localStorage.getItem("accessToken")
+      }
+    }).then(function (response) {
+      return response.text();
+    });
+  }
+}
 
 

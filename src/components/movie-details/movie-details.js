@@ -1,8 +1,8 @@
 window.onload = () => {
   let urlParams = new URLSearchParams(window.location.search);
-  let gameId = urlParams.get('id');
-  console.log(gameId);
-  HttpService.getMovieDetails(gameId).then(response => {
+  let movieId = urlParams.get('id');
+  console.log(movieId);
+  HttpService.getMovieDetails(movieId).then(response => {
     console.log(response);
     loadMovie(response);
     checkIfLoggedIn()
@@ -44,8 +44,8 @@ function createMovieTemplate(movie) {
     <p>Genre: ${movie.Genre}</p>
   </div>
   <div class="movie-actions">
-    <button type="button" class="edit-button">Edit</button>
-    <button type="button" class="delete-button">Delete</button>
+    <button type="button" class="openUpdate"class="edit-button">Edit</button>
+    <button type="button" onclick ="openPopUp()" class="delete-button">Delete</button>
   </div>
 </div>
 </div>

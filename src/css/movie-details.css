@@ -4,7 +4,7 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, section .movie .movie-content .movie-actions button {
+header nav .login button, header nav .logout button, section .movie .movie-content .movie-actions button {
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -40,7 +40,7 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, section .movie .movie-content .movie-actions button {
+header nav .login button, header nav .logout button, section .movie .movie-content .movie-actions button {
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -127,7 +127,7 @@ header .header--search input {
   color: white;
 }
 
-header nav .login .logout {
+header nav .logout {
   display: none;
 }
 
@@ -180,10 +180,10 @@ section .movie .movie-content .movie-description p {
 
 section .movie .movie-content .movie-actions {
   text-align: right;
+  display: none;
 }
 
 section .movie .movie-content .movie-actions button {
   padding: 10px;
-  display: none;
 }
 /*# sourceMappingURL=movie-details.css.map */

@@ -56,16 +56,16 @@ header {
     }
   }
   nav {
-    .login {
+    .login, .logout{
       button {
         @extend %action-button;
       }
+    }
       .logout {
         display: none;
       }
     }
   }
-}
 
 footer {
   @extend %align-content;

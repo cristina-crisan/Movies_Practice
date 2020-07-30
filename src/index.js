@@ -4,6 +4,7 @@ window.onload = () => {
     console.log(response);
     createPagination(response.pagination);
     loadMovies(response.results);
+    checkIfLoggedIn()
   });
 }
 
@@ -98,10 +99,19 @@ function homePage() {
   location.reload();
 }
 
-function loginPage(){
+function loginPage() {
   location.assign("src/components/login/login-page.html")
 }
 
-function openMovieDetails(movieId){
-  window.location.href ="src/components/movie-details/movie-details.html?id=" + movieId;
+function openMovieDetails(movieId) {
+  window.location.href = "src/components/movie-details/movie-details.html?id=" + movieId;
+}
+
+function checkIfLoggedIn() {
+  if (localStorage.getItem("accessToken")) {
+    document.querySelector(".login").style.display ="none";
+    document.querySelector(".logout").style.display = "block";
+    let username = document.querySelector(".user-name")
+    username.innerText = localStorage.getItem("user");
+  }
 }

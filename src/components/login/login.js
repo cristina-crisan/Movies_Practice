@@ -9,4 +9,12 @@ function login() {
       localStorage.setItem("user", username);
     })
   }
+  showLogOut()
+}
+
+function showLogOut(){
+  if (localStorage.getItem("accessToken")){
+    document.querySelector(".login").style.display = "none";
+    document.querySelector(".logout").style.display = "inline-block";
+  }
 }

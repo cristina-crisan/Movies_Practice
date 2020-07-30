@@ -49,10 +49,10 @@ section {
       }
       .movie-actions {
         text-align: right;
+        display: none;
         button {
           @extend %action-button;
           padding: 10px;
-          display: none;
         }
       }
     }

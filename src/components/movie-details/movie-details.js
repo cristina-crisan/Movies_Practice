@@ -5,6 +5,7 @@ window.onload = () => {
   HttpService.getMovieDetails(gameId).then(response => {
     console.log(response);
     loadMovie(response);
+    checkIfLoggedIn()
   })
 }
 
@@ -53,4 +54,14 @@ function createMovieTemplate(movie) {
 
 function back(){
   location.assign("../../../index.html");
+}
+
+function checkIfLoggedIn(){
+  if (localStorage.getItem("accessToken")){
+    document.querySelector(".login").style.display = "none";
+    document.querySelector(".logout").style.display = "block";
+    let username = document.querySelector(".user-name")
+    username.innerText = localStorage.getItem("user");
+    document.querySelector(".movie-actions").style.display = "block";
+  }
 }

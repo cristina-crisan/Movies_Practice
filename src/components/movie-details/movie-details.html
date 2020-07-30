@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../css/movie-details.css">
-    <script src="https://kit.fontawesome.com/637a8056ca.js" crossorigin="anonymous"></script>
-    <title>Movies</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="header--wrapper">
-        <div onclick="homePage()" class="logo">Movies</div>
-        <div class="header--search">
-          <input class="title" type="text" name="search" onkeyup="search()" placeholder="Search">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../../css/movie-details.css">
+  <script src="https://kit.fontawesome.com/637a8056ca.js" crossorigin="anonymous"></script>
+  <title>Movies</title>
+</head>
+
+<body>
+  <header>
+    <div class="header--wrapper">
+      <div onclick="homePage()" class="logo">Movies</div>
+      <nav>
+        <div class="login">
+          <button onclick="loginPage()" class="login" type="button">/ Login</button>
         </div>
-        <nav>
-          <div class="login">
-            <button onclick="loginPage()" class="login" type="button">/ Login</button>
-            <button class="logout" type="button">/ Logout</button>
-          </div>
-        </nav>
-      </div>
-      <div class="decoration--line"></div>
-    </header>
-    <section class="movie-template"></section>
-    <div class="wrapper">
-      <button class="back" onclick="back()"><i class="fas fa-arrow-left"></i></i></button>
+        <div class="logout">
+          <span class="user-name"></span>
+          <button type="button">/ Logout</button>
+        </div>
+      </nav>
     </div>
-    <footer>
-      <div class="decoration--line"></div>
-      <div class="footer-container">
-        <p>Cristina CRISAN</p>
-      </div>
-    </footer>
-    <script src="../../http-service.js"></script>
-    <script src="movie-details.js"></script>
-  </body>
+    <div class="decoration--line"></div>
+  </header>
+  <section class="movie-template"></section>
+  <div class="wrapper">
+    <button class="back" onclick="back()"><i class="fas fa-arrow-left"></i></i></button>
+  </div>
+  <footer>
+    <div class="decoration--line"></div>
+    <div class="footer-container">
+      <p>Cristina CRISAN</p>
+    </div>
+  </footer>
+  <script src="../../http-service.js"></script>
+  <script src="movie-details.js"></script>
+</body>
 
-  </html>
+</html>

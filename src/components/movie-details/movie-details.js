@@ -60,6 +60,7 @@ function checkIfLoggedIn(){
   if (localStorage.getItem("accessToken")){
     document.querySelector(".login").style.display = "none";
     document.querySelector(".logout").style.display = "block";
+    document.querySelector(".add-movie").style.display = "block";
     let username = document.querySelector(".user-name")
     username.innerText = localStorage.getItem("user");
     document.querySelector(".movie-actions").style.display = "block";

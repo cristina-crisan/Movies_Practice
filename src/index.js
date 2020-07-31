@@ -103,6 +103,10 @@ function loginPage() {
   location.assign("src/components/login/login-page.html")
 }
 
+function addMovie(movieId=0){
+  window.location.href = "src/components/add-or-update-page/add-or-update-page.html?id=" + movieId;
+}
+
 function openMovieDetails(movieId) {
   window.location.href = "src/components/movie-details/movie-details.html?id=" + movieId;
 }
@@ -111,6 +115,7 @@ function checkIfLoggedIn() {
   if (localStorage.getItem("accessToken")) {
     document.querySelector(".login").style.display ="none";
     document.querySelector(".logout").style.display = "block";
+    document.querySelector(".add-movie").style.display = "block";
     let username = document.querySelector(".user-name")
     username.innerText = localStorage.getItem("user");
   }

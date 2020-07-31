@@ -4,7 +4,7 @@ header, footer {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button {
+header nav .login button, header nav .logout button, header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button {
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -69,7 +69,7 @@ header .header--search input {
   color: white;
 }
 
-header nav .logout {
+header nav .logout, header nav .add-movie {
   display: none;
 }
 
@@ -85,7 +85,7 @@ header, footer {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button {
+header nav .login button, header nav .logout button, header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button {
   border: none;
   background-color: transparent;
   font-size: 16px;

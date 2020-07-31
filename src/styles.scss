@@ -56,12 +56,12 @@ header {
     }
   }
   nav {
-    .login, .logout{
+    .login, .logout, .add-movie{
       button {
         @extend %action-button;
       }
     }
-      .logout {
+      .logout, .add-movie {
         display: none;
       }
     }

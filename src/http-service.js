@@ -84,6 +84,18 @@ class HttpService {
       return response.json();
     });
   }
+
+  static add(data) {
+    return fetch( `${url}/movies`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        "x-Auth-Token": localStorage.getItem("accessToken")
+      }
+    }).then(response => {
+      return response.json();
+    });
 }
 
-
+}

@@ -25,8 +25,8 @@
   </header>
   <section>
     <div class="section-wrapper">
-      <div class="image-game">
-        <img src="..\..\images\765-default-avatar.png" alt="image game">
+      <div class="image-movie">
+        <img src="..\..\images\765-default-avatar.png" alt="image movie">
       </div>
       <form>
         <div class="form-details">
@@ -37,7 +37,7 @@
           <input class="runtime" type="text" placeholder="Movie runtime" />
           <input class="genre" type="text" placeholder="Movie genre" />
           <input class="rating" type="text" placeholder="Movie rating" />
-          <input type="url" placeholder="Image url" />
+          <input type="url" onchange ="changeImage()" placeholder="Image url" />
         </div>
         <div class="save--button">
           <button type="button" onclick="save()">SAVE</button>
@@ -52,7 +52,7 @@
     </div>
   </footer>
   <script type="text/javascript" src="../../http-service.js"></script>
-  <script type="text/javascript" src="add-or-update.js"></script>
+  <script type="text/javascript" src="add-or-update-page.js"></script>
 </body>
 
 </html>

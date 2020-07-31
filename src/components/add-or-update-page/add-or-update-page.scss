@@ -11,11 +11,13 @@
 input {
   @extend %input-textarea;
   @extend %input-design;
+  color:white;
 }
 
 textarea {
   @extend %input-textarea;
   height: 100px;
+  color:white;
 }
 
 section {
@@ -25,7 +27,7 @@ section {
   margin: 20px auto;
   .section-wrapper {
     display: flex;
-    .image-game {
+    .image-movie {
       img {
         max-width: 350px;
         width: 100%;

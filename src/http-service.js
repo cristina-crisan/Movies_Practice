@@ -71,6 +71,19 @@ class HttpService {
       return response.text();
     });
   }
+
+  static update(movieId,data){
+    return fetch(`${url}/movies/${movieId}`, {
+      method: "PUT",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-type": "application/json",
+        "x-Auth-Token": localStorage.getItem("accessToken")
+      }
+    }).then(function(response) {
+      return response.json();
+    });
+  }
 }
 
 

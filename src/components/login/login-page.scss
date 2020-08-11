@@ -30,7 +30,12 @@ section {
         input {
           @extend %input-textarea;
           @extend %input-design;
+          color: #7e796a;
         }
+        input:-webkit-autofill {
+          -webkit-text-fill-color: #7e796a !important;
+          transition: background-color 5000s ease-in-out 0s;
+      }
       }
       .user-action {
         @extend %form-button;

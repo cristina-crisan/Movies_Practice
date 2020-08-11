@@ -16,7 +16,7 @@ function regenerate() {
 
 function createMovieTemplate(movie) {
   return `
-  <div class="movie"style="background-image: url(${movie.Poster})" id =${movie._id}  onclick = "openMovieDetails('${movie._id}')" >
+  <div class="movie" style="background-image: url(${movie.Poster != 'N/A' ? movie.Poster : 'src/images/Batman-hover.jpg'} )" id =${movie._id}  onclick = "openMovieDetails('${movie._id}')" >
   <p class="movie-title">${movie.Title}</p>
 </div> `
 }
@@ -83,7 +83,7 @@ function createPagination(movies) {
 }
 
 function movieDetails() {
-  location.assign("src/components/movie-details/movie-details.html")
+  location.assign("src/components/movie-details/movie-details.html");
 }
 
 function search() {
@@ -103,20 +103,31 @@ function loginPage() {
   location.assign("src/components/login/login-page.html")
 }
 
-function addMovie(movieId=0){
-  window.location.href = "src/components/add-or-update-page/add-or-update-page.html?id=" + movieId;
+function addMovie() {
+  window.location.href = "src/components/add-or-update-page/add-or-update-page.html?id=0";
 }
 
 function openMovieDetails(movieId) {
-  window.location.href = "src/components/movie-details/movie-details.html?id=" + movieId;
+  window.location.href = `src/components/movie-details/movie-details.html?id=${movieId}`;
 }
 
 function checkIfLoggedIn() {
   if (localStorage.getItem("accessToken")) {
-    document.querySelector(".login").style.display ="none";
+    document.querySelector(".login").style.display = "none";
     document.querySelector(".logout").style.display = "block";
     document.querySelector(".add-movie").style.display = "block";
-    let username = document.querySelector(".user-name")
+    let username = document.querySelector(".user-name span");
     username.innerText = localStorage.getItem("user");
   }
+}
+
+function logout() {
+  document.querySelector(".logout").style.display = "none";
+  document.querySelector(".user-name").style.display = "none";
+  document.querySelector(".add-movie").style.display = "none";
+  document.querySelector(".login").style.display = "block";
+  HttpService.logoutUser().then(response => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("user");
+  })
 }

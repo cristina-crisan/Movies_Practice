@@ -5,26 +5,36 @@
   @extend %wrapper;
   .back {
     @extend %back-button;
+    @extend %button-positioning;
   }
 }
 
 input {
   @extend %input-textarea;
   @extend %input-design;
-  color:white;
+  color: #7e796a;
 }
 
 textarea {
   @extend %input-textarea;
-  height: 100px;
-  color:white;
+  height: 60px;
+  color: #7e796a;
+}
+
+.page-title {
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  h2 {
+    margin: 10px 0;
+  }
 }
 
 section {
   @extend %align-content;
   border: 1px solid $primary-color;
   box-shadow: 0px 0px 10px 0px $primary-color;
-  margin: 20px auto;
+  margin: 5px auto;
   .section-wrapper {
     display: flex;
     .image-movie {

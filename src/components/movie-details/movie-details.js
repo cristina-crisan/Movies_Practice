@@ -44,7 +44,7 @@ function createMovieTemplate(movie) {
     <p>Genre: ${movie.Genre}</p>
   </div>
   <div class="movie-actions">
-    <button type="button" onclick="openUpdatePage('${movie._id}')" class="edit-button">Edit</button>
+    <button type="button" onclick ="openUpdatePage('${movie._id}')" class="edit-button">Edit</button>
     <button type="button" onclick ="openPopUp()" class="delete-button">Delete</button>
   </div>
 </div>
@@ -52,23 +52,21 @@ function createMovieTemplate(movie) {
 `
 }
 
-function back(){
+function back() {
   location.assign("../../../index.html");
 }
 
-function checkIfLoggedIn(){
-  if (localStorage.getItem("accessToken")){
-    document.querySelector(".login").style.display = "none";
-    document.querySelector(".logout").style.display = "block";
-    document.querySelector(".add-movie").style.display = "block";
-    let username = document.querySelector(".user-name")
-    username.innerText = localStorage.getItem("user");
+function homePage() {
+  location.assign("../../../index.html");
+}
+
+function checkIfLoggedIn() {
+  if (localStorage.getItem("accessToken")) {
     document.querySelector(".movie-actions").style.display = "block";
   }
 }
 
-function openUpdatePage(movieId){
-console.log("id",movieId)
-  window.location.href = "../add-or-update-page/add-or-update-page.html?id=" + movieId;
+function openUpdatePage(movieId) {
+  window.location.href = `../add-or-update-page/add-or-update-page.html?id=${movieId}` ;
 }
 

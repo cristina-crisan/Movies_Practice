@@ -4,11 +4,12 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, header nav .add-movie button, .pagination button {
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button, .pagination button {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  text-transform: uppercase;
   color: inherit;
 }
 
@@ -36,11 +37,12 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, header nav .add-movie button, .pagination button {
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button, .pagination button {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  text-transform: uppercase;
   color: inherit;
 }
 
@@ -78,7 +80,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: 0;
 }
 
 * {
@@ -97,6 +98,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 header .header--wrapper {
@@ -113,13 +115,18 @@ header .header--search {
 header .header--search input {
   margin-left: 20px;
   height: 25px;
-  width: 30%;
+  width: 50%;
   background-color: #131210;
   border: 2px solid #262420;
   color: white;
 }
 
-header nav .logout, header nav .add-movie {
+header nav {
+  display: flex;
+}
+
+header nav .logout,
+header nav .add-movie {
   display: none;
 }
 

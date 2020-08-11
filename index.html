@@ -17,16 +17,17 @@
         <input class="title" type="text" name="search" onkeyup="search()" placeholder="Search">
       </div>
       <nav>
-
+        <div class="user-name">
+          <span></span>
+        </div>
         <div class="login">
-          <button onclick="loginPage()" class="login" type="button">/ Login</button>
+          <button onclick="loginPage()" type="button">/ Login</button>
         </div>
         <div class="logout">
-          <span class="user-name"></span>
-          <button type="button">/ Logout</button>
+          <button onclick="logout()" type="button">/ Logout</button>
         </div>
         <div class="add-movie">
-          <button onclick="addMovie(movieId=0)"type="button">/ Add new movie</button>
+          <button onclick="addMovie()" type="button">/ Add movie</button>
         </div>
       </nav>
     </div>
@@ -47,7 +48,7 @@
   </footer>
   <script src="src/http-service.js"></script>
   <script src="src/index.js"></script>
- 
+
 </body>
 
 </html>

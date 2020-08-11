@@ -4,11 +4,12 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  text-transform: uppercase;
   color: inherit;
 }
 
@@ -40,114 +41,12 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  text-transform: uppercase;
-  color: inherit;
-}
-
-.wrapper {
-  margin: 5px 0 0 0;
-}
-
-.wrapper .back {
-  display: block;
-  font-size: 24px;
-  border: none;
-  background-color: transparent;
-}
-
-.wrapper .back i {
-  color: #7e796a;
-}
-
-.wrapper .back {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-}
-
-html {
-  margin: 0;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #131210;
-  color: #7e796a;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.decoration--line {
-  width: 100%;
-  height: 1px;
-  border-right: 1px solid #b7b09b;
-  border-left: 1px solid #b7b09b;
-  background-color: #262420;
-}
-
-.logo {
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-}
-
-header .header--wrapper {
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .header--search {
-  flex-grow: 1;
-}
-
-header .header--search input {
-  margin-left: 20px;
-  height: 25px;
-  width: 30%;
-  background-color: #131210;
-  border: 2px solid #262420;
-  color: white;
-}
-
-header nav .logout, header nav .add-movie {
-  display: none;
-}
-
-footer .footer-container {
-  text-align: center;
-  height: 60px;
-  line-height: 60px;
-}
-
-header, footer, section {
-  max-width: 1050px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-header nav .login button, header nav .logout button, header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
-  border: none;
-  background-color: transparent;
-  font-size: 16px;
-  text-transform: uppercase;
   color: inherit;
 }
 
@@ -189,7 +88,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: 0;
 }
 
 * {
@@ -208,6 +106,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 header .header--wrapper {
@@ -224,13 +123,18 @@ header .header--search {
 header .header--search input {
   margin-left: 20px;
   height: 25px;
-  width: 30%;
+  width: 50%;
   background-color: #131210;
   border: 2px solid #262420;
   color: white;
 }
 
-header nav .logout, header nav .add-movie {
+header nav {
+  display: flex;
+}
+
+header nav .logout,
+header nav .add-movie {
   display: none;
 }
 
@@ -246,11 +150,121 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  text-transform: uppercase;
+  color: inherit;
+}
+
+.wrapper {
+  margin: 5px 0 0 0;
+}
+
+.wrapper .back {
+  display: block;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.wrapper .back i {
+  color: #7e796a;
+}
+
+.wrapper .back {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #131210;
+  color: #7e796a;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.decoration--line {
+  width: 100%;
+  height: 1px;
+  border-right: 1px solid #b7b09b;
+  border-left: 1px solid #b7b09b;
+  background-color: #262420;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+header .header--wrapper {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header--search {
+  flex-grow: 1;
+}
+
+header .header--search input {
+  margin-left: 20px;
+  height: 25px;
+  width: 50%;
+  background-color: #131210;
+  border: 2px solid #262420;
+  color: white;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav .logout,
+header nav .add-movie {
+  display: none;
+}
+
+footer .footer-container {
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+header, footer, section {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button, .pop-up--wrapper .pop-up-content .pop-up--header button, .pop-up--wrapper .pop-up-content .pop-up--footer button, section .movie .movie-content .movie-actions button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
   color: inherit;
 }
 

@@ -1,12 +1,10 @@
 window.onload = () => {
   let urlParams = new URLSearchParams(window.location.search);
   let movieId = urlParams.get('id');
-  console.log(movieId);
-  let pageTitle = document.querySelector(".page-title p")
+  let pageTitle = document.querySelector(".page-title h2")
   if (movieId != 0) {
     pageTitle.innerHTML = "Edit movie";
     HttpService.getMovieDetails(movieId).then(response => {
-      console.log(response)
       populateInputs(response);
     })
   } else {
@@ -14,16 +12,24 @@ window.onload = () => {
   }
 }
 
+function homePage() {
+  location.assign("../../../index.html")
+}
+
 function back() {
   let urlParams = new URLSearchParams(window.location.search);
   let movieId = urlParams.get('id');
-  location.assign("../movie-details/movie-details.html?id=" + movieId);
+  if (movieId != 0) {
+    location.assign(`../movie-details/movie-details.html?id= ${movieId}`);
+  } else {
+    location.assign("../../../index.html");
+  }
 }
 
 function getInputs() {
   let title = document.querySelector(".title");
   let year = document.querySelector(".year");
-  let actors =  document.querySelector(".actors");
+  let actors = document.querySelector(".actors");
   let language = document.querySelector(".language");
   let runtime = document.querySelector(".runtime");
   let genre = document.querySelector(".genre");
@@ -90,7 +96,6 @@ function movieData() {
     Genre: movieInputNodes.Genre.value,
     imdbRating: movieInputNodes.imdbRating.value,
     Poster: movieInputNodes.Poster.value,
-
   }
 }
 
@@ -99,7 +104,7 @@ async function updateMovie(movieId) {
   console.log("data", data);
   await HttpService.update(movieId, data);
   console.log("afterData", data);
-  location.assign("../movie-details/movie-details.html?id=" + movieId);
+  location.assign(`../movie-details/movie-details.html?id=${movieId}`);
 }
 
 async function addNewMovie() {

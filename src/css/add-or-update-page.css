@@ -4,11 +4,12 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, header nav .add-movie button {
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  text-transform: uppercase;
   color: inherit;
 }
 
@@ -49,6 +50,13 @@ input {
 
 .wrapper .back i {
   color: #7e796a;
+}
+
+.wrapper .back {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 header, footer, section {
@@ -57,11 +65,12 @@ header, footer, section {
   margin: 0 auto;
 }
 
-header nav .login button, header nav .logout button, header nav .add-movie button {
+header nav .login button,
+header nav .logout button,
+header nav .add-movie button {
   border: none;
   background-color: transparent;
   font-size: 16px;
-  text-transform: uppercase;
   color: inherit;
 }
 
@@ -102,6 +111,13 @@ input {
 
 .wrapper .back i {
   color: #7e796a;
+}
+
+.wrapper .back {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 html {
@@ -120,7 +136,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: 0;
 }
 
 * {
@@ -139,6 +154,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 header .header--wrapper {
@@ -155,13 +171,18 @@ header .header--search {
 header .header--search input {
   margin-left: 20px;
   height: 25px;
-  width: 30%;
+  width: 50%;
   background-color: #131210;
   border: 2px solid #262420;
   color: white;
 }
 
-header nav .logout, header nav .add-movie {
+header nav {
+  display: flex;
+}
+
+header nav .logout,
+header nav .add-movie {
   display: none;
 }
 
@@ -172,18 +193,28 @@ footer .footer-container {
 }
 
 input {
-  color: white;
+  color: #7e796a;
 }
 
 textarea {
-  height: 100px;
-  color: white;
+  height: 60px;
+  color: #7e796a;
+}
+
+.page-title {
+  text-align: center;
+  border: none;
+  box-shadow: none;
+}
+
+.page-title h2 {
+  margin: 10px 0;
 }
 
 section {
   border: 1px solid #7e796a;
   box-shadow: 0px 0px 10px 0px #7e796a;
-  margin: 20px auto;
+  margin: 5px auto;
 }
 
 section .section-wrapper {

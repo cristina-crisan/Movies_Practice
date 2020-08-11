@@ -1,34 +1,33 @@
-const baseUrl = "https://movies-api-siit.herokuapp.com/movies?skip=0&take=10";
-const url = "https://movies-api-siit.herokuapp.com"
+const baseUrl = "https://movies-api-siit.herokuapp.com"
 class HttpService {
   constructor() { };
 
   static regenerateMovies() {
-    return fetch(`${url}/movies/all`, {
+    return fetch(`${baseUrl}/movies/all`, {
       method: "POST"
     });
   };
 
   static getMovies() {
-    return fetch(baseUrl).then(response => response.json());
+    return fetch(`${baseUrl}/movies/?skip=0&take=10`).then(response => response.json());
   };
 
   static getAllMovies(skip = null) {
-    return fetch("https://movies-api-siit.herokuapp.com" + "/movies" + "?skip" + "=" + skip + "&take=10")
+    return fetch(`${baseUrl}/movies/?skip=${skip}&take=10`)
       .then(response => {
         return response.json();
       });
   }
 
   static searchMovie(title) {
-    return fetch("https://movies-api-siit.herokuapp.com" + "/movies" + "?Title" + "=" + title)
+    return fetch(`${baseUrl}/movies/?Title=${title}`)
       .then(response => {
         return response.json();
       });
   }
 
   static getMovieDetails(movieId) {
-    return fetch(`${url}/movies/${movieId}`).then(response => response.json());
+    return fetch(`${baseUrl}/movies/${movieId}`).then(response => response.json());
   }
 
   static register(username, password) {
@@ -36,7 +35,7 @@ class HttpService {
       username: username,
       password: password
     };
-    return fetch(url + "/auth/register", {
+    return fetch(`${baseUrl}/auth/register`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -51,7 +50,7 @@ class HttpService {
       password: password
     };
 
-    return fetch(url + "/auth/login", {
+    return fetch(`${baseUrl}/auth/login`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -60,8 +59,17 @@ class HttpService {
     }).then(response => response.json())
   }
 
+  static logoutUser() {
+    return fetch(`${baseUrl}/auth/logout`, {
+      method: "GET",
+      headers: {
+        "x-Auth-Token": localStorage.getItem("accessToken")
+      }
+    }).then(response => response.json())
+  }
+
   static delete(movieId) {
-    return fetch(`${url}/movies/${movieId}`, {
+    return fetch(`${baseUrl}/movies/${movieId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -72,21 +80,21 @@ class HttpService {
     });
   }
 
-  static update(movieId,data){
-    return fetch(`${url}/movies/${movieId}`, {
+  static update(movieId, data) {
+    return fetch(`${baseUrl}/movies/${movieId}`, {
       method: "PUT",
       body: JSON.stringify(data),
       headers: {
         "Content-type": "application/json",
         "x-Auth-Token": localStorage.getItem("accessToken")
       }
-    }).then(function(response) {
+    }).then(function (response) {
       return response.json();
     });
   }
 
   static add(data) {
-    return fetch( `${url}/movies`, {
+    return fetch(`${baseUrl}/movies`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -96,6 +104,6 @@ class HttpService {
     }).then(response => {
       return response.json();
     });
-}
+  }
 
 }

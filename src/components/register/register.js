@@ -17,10 +17,13 @@ function register() {
     if (response.authenticated) {
       localStorage.setItem("accessToken", response.accessToken);
       localStorage.setItem("user", username);
+      goToLogin()
     }
   });
   }
 }
 
-
+function goToLogin(){
+  location.assign("../login/login-page.html")
+}
 

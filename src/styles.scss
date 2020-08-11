@@ -15,7 +15,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: 0;
 }
 
 * {
@@ -34,6 +33,7 @@ body {
   font-size: $font-size + 4px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 header {
@@ -49,23 +49,27 @@ header {
     input {
       margin-left: 20px;
       height: 25px;
-      width: 30%;
+      width: 50%;
       background-color: $bg-color;
       border: 2px solid $line-color;
       color: white;
     }
   }
   nav {
-    .login, .logout, .add-movie{
+    display: flex;
+    .login,
+    .logout,
+    .add-movie {
       button {
         @extend %action-button;
       }
     }
-      .logout, .add-movie {
-        display: none;
-      }
+    .logout,
+    .add-movie {
+      display: none;
     }
   }
+}
 
 footer {
   @extend %align-content;
